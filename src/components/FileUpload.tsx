@@ -148,7 +148,7 @@ export function FileUpload({ onAnalysisStart, onAnalysisComplete }: FileUploadPr
       const selectedModel = getFromLocalStorage('selected-model') || 'gpt-4o-mini'
       
       // Fallback API configuration for OpenRouter
-      const FALLBACK_API_KEY = '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'
+      const FALLBACK_API_KEY = process.env.API_KEY || ''
       const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions'
       const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions'
       const FREE_MODEL = 'openai/gpt-4o-mini' // Vision-capable free model
